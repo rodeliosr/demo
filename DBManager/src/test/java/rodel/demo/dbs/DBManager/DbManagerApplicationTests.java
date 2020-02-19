@@ -38,6 +38,11 @@ class DbManagerApplicationTests {
 	@Test
 	public void testDatabase() {
 
+		CartProduct product = new CartProduct(1,33333,"Test Product",2,3.00);
+		this.storeRepository.save(product);
+		int recid = product.getRecid();
+		System.out.print("REC ID :" + recid);
+		assertTrue(recid>0);
 	}
 
 
